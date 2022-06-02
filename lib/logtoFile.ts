@@ -14,11 +14,9 @@ export default function (type: string, text: string, logPath: any, showDate: boo
     }
 
     //@ts-ignore
-    appendFileSync(path.join(__dirname + '/../../', logPath), content + '\n', function (err) {
+    appendFileSync(path.join(__dirname + '/../../../../', logPath), content + '\n', function (err) {
         if (err) {
             console.log(err.stack || err)
         }
     })
-
-
 }

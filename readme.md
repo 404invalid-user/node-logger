@@ -14,7 +14,7 @@ const {BasicLogger} = require('@404invalid-user/logger');
 
 const  logPath = './logs.log';
 const  allowDebugLogs = true;
-const  log = new  BasicLogger(logPath, allowDebugLogs);
+const  log = new BasicLogger(logPath, allowDebugLogs);
 
 log.success("app is running");
 log.info("app is still running");
@@ -37,7 +37,7 @@ const  loggerConfig = {
   debug:true
 }
 
-const  log = AdvancedLogger(loggerConfig);
+const  log = new AdvancedLogger(loggerConfig);
 
 log.success("app is running");
 log.info("app is still running");
@@ -86,7 +86,7 @@ first you can disable each logging function by passing false instead of the obje
 //example
 const {AdvancedLogger} = require('@404invalid-user/logger');
 const  loggerConfig = {success:false}
-const  log = AdvancedLogger(loggerConfig);
+const  log = new AdvancedLogger(loggerConfig);
 
 //will not do anything
 log.success("app is running");
