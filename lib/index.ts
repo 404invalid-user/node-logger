@@ -79,7 +79,7 @@ type Config = {
 
 const colours: Array<string> = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white", "grey"]
 export class AdvancedLogger {
-    config: Config
+    config: any
     constructor(config: Config) {
         if (config.success) {
             if (config.success.color && colours.indexOf(config.success.color) < 0) {
